@@ -100,7 +100,7 @@ if (isset($_GET['id'])) {
             </div>
             <!-- End foto -->
             <!-- start tombol pesan -->
-            <button type="submit" class="btn btn-outline-success">Edit </button>
+            <button type="submit" class="btn btn-outline-success">Ubah</button>
             <a href="objekWisata.php" class="btn btn-outline-warning">Kembali</a>
             <!-- end tombol pesan -->
         </form>

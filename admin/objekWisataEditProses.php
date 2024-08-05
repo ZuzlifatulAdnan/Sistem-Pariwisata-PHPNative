@@ -19,26 +19,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Periksa apakah file gambar adalah gambar asli atau gambar palsu
         $check = getimagesize($_FILES["foto"]["tmp_name"]);
         if ($check === false) {
-            echo "<script>alert('Fila bukan gambar '); windows</script>";
+            echo "<script>alert('File bukan gambar')</script>";
             $uploadOk = 0;
         }
 
         // Periksa ukuran file
         if ($_FILES["foto"]["size"] > 500000) {
-            echo "<script>alert('Maaf file kamu besar '); windows</script>";
+            echo "<script>alert('Maaf file kamu besar')</script>";
             $uploadOk = 0;
         }
 
         // Izinkan format file tertentu
         $allowedFormats = ["jpg", "jpeg", "png", "gif"];
         if (!in_array($imageFileType, $allowedFormats)) {
-            echo "<script>alert('Maaf hanya file JPG, JPEG, PNG & GIF yang diizinkan '); windows</script>";
+            echo "<script>alert('Maaf hanya file JPG, JPEG, PNG & GIF yang diizinkan '); window.location.href='objekWisata.php';</script>";
             $uploadOk = 0;
         }
 
         // Periksa apakah $uploadOk disetel ke 0 karena kesalahan
         if ($uploadOk == 0) {
-            echo "<script>alert('Maaf file kamu gagal diupload'); windows</script>";
+            echo "<script>alert('Maaf file kamu gagal diupload'); window.location.href='objekWisata.php';</script>";
             exit();
         }
     }
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($stmt->execute()) {
-        header('Location: objekWisata.php');
+        echo "<script>alert('Berhasil upload data'); window.location.href='objekWisata.php';</script>";
         exit();
     } else {
         echo "Error: " . $stmt->error;

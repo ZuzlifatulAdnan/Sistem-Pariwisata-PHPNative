@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($stmt->execute()) {
-        header('Location: artikel.php');
+        echo "<script>alert('Artikel successfully update.'); window.location.href='artikel.php';</script>";
         exit();
     } else {
         echo "Error: " . $stmt->error;

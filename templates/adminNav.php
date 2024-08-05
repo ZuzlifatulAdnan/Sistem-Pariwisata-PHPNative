@@ -11,7 +11,7 @@
                 <li class="nav-item"><a class="nav-link" href="../admin/objekWisata.php">Obyek Wisata</a></li>
                 <li class="nav-item"><a class="nav-link" href="../admin/fasilitasWisata.php">Fasilitas Wisata</a></li>
                 <li class="nav-item"><a class="nav-link" href="../admin/paketWisata.php">Paket Wisata</a></li>
-                <li class="nav-item"><a class="nav-link" href="../admin/users.php">User</a>
+                <li class="nav-item"><a class="nav-link" href="../admin/user.php">User</a>
                 <li class="nav-item"><a class="nav-link" href="../admin/Pemesanan.php">Pemesanan</a></li>
                 <li class="nav-item"><a class="nav-link" href="../admin/gallery.php">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="../admin/logout.php">Logout</a></li>

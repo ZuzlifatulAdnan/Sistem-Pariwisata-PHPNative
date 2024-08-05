@@ -47,8 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("sss", $nama, $deskripsi, $target_file);
 
             if ($stmt->execute()) {
-                echo "<script>alert('Objek Wisata Berhasil Ditambah'); windows</script>";
-                header('Location: objekWisata.php');
+                echo "<script>alert('Objek Wisata Berhasil Ditambah'); window.location.href='objekWisata.php';</script>";
                 exit();
             } else {
                 echo "Error: " . $stmt->error;
@@ -56,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $stmt->close();
         } else {
-            echo "<script>alert('Maaf  upload file gagal'); windows</script>";
+            echo "<script>alert('Maaf  upload file gagal'); window.location.href='objekWisata.php';</script>";
         }
 
         $conn->close();

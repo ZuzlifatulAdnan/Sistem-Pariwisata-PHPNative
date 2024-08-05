@@ -47,8 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("sss", $judul, $deskripsi, $target_file);
 
             if ($stmt->execute()) {
-                echo "<script>alert('Artikel Berhasil Ditambah'); windows</script>";
-                header('Location: artikel.php');
+                echo "<script>alert('Artikel successfully added.'); window.location.href='artikel.php';</script>";
                 exit();
             } else {
                 echo "Error: " . $stmt->error;
