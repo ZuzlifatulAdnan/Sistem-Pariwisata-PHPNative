@@ -22,8 +22,8 @@ Tampilan pengguna dirancang untuk memberikan pengalaman yang mudah dan intuitif 
 - Menjelajahi artikel terbaru tentang pariwisata di Lampung.
 - Mencari dan melihat detail objek wisata.
 - Melihat informasi tentang fasilitas wisata yang tersedia.
-- Memilih dan memesan paket wisata.
-- Memeriksa status pemesanan dengan memasukkan nomor pemesanan di halaman "Cari Pemesanan".
+- Melihat paket wisata.
+- Memeriksa status pemesanan dengan memasukkan nomor pemesanan di halaman "Cari Pemesanan" dan membuat pemesa an dan mencetak pdf.
 - Menikmati galeri foto dan video dari keindahan Lampung.
 
 ### Tampilan Admin
@@ -41,6 +41,8 @@ Tampilan admin disediakan untuk pengelola situs web agar dapat mengelola konten 
 1. **Halaman Utama**: Navigasikan melalui bagian utama menggunakan menu di bagian atas.
 2. **Cari Pemesanan**: Masukkan nomor pemesanan Anda di bagian "Cari Pemesanan" untuk memeriksa detail pemesanan Anda.
 3. **Jelajahi**: Klik pada item menu seperti `Artikel`, `Obyek Wisata`, `Fasilitas Wisata`, `Paket Wisata`, dan `Galeri` untuk mengeksplorasi lebih lanjut.
+4. **Database**: di folder Database untuk di import ke data base.
+
 
 ## Kontak
 
