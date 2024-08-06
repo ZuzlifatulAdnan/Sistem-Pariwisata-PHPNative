@@ -134,3 +134,44 @@
 .links{
     margin-bottom: 15px;
 }
+
+.article-header {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.article-header img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Atur lebar maksimum */
+    max-height: 400px; /* Atur tinggi maksimum */
+    object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+.article-body {
+    margin: 20px 0;
+}
+
+.article-body p {
+    text-align: justify;
+}
+.wisata-header {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.wisata-header img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Atur lebar maksimum */
+    max-height: 400px; /* Atur tinggi maksimum */
+    object-fit: cover; /* Menjaga proporsi gambar */
+}
+
+.wisata-body {
+    margin: 20px 0;
+}
+
+.wisata-body p {
+    text-align: justify;
+}

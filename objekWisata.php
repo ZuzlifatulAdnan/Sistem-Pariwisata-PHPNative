@@ -3,8 +3,7 @@
 include 'config/db.php';
 
 // Fungsi untuk memotong teks ke jumlah karakter tertentu
-function limitCharacters($string, $char_limit)
-{
+function limitCharacters($string, $char_limit) {
     if (strlen($string) > $char_limit) {
         return substr($string, 0, $char_limit) . '...';
     } else {
@@ -13,22 +12,22 @@ function limitCharacters($string, $char_limit)
 }
 
 // Fetch articles from database
-function fetchArticles($conn)
+function fetchObjekWisata($conn)
 {
-    $sql = "SELECT id, judul, deskripsi, foto, tglUpload FROM artikel";
+    $sql = "SELECT id, nama, deskripsi, foto, tglUpload FROM objekwisata";
     $result = $conn->query($sql);
 
-    $articles = [];
+    $wisata = [];
     if ($result && $result->num_rows > 0) {
         // Output data of each row
         while ($row = $result->fetch_assoc()) {
-            $articles[] = $row;
+            $wisata[] = $row;
         }
     }
-    return $articles;
+    return $wisata;
 }
 
-$articles = fetchArticles($conn);
+$wisata = fetchObjekWisata($conn);
 
 ?>
 <!DOCTYPE html>
@@ -37,7 +36,7 @@ $articles = fetchArticles($conn);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artikel - Pariwisata Lampung</title>
+    <title>Pariwisata Lampung</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <meta name="description" content="Pariwisata Lampung">
     <meta name="digitaltalent:email" content="juslifatuladnan@gmail.com">
@@ -47,6 +46,9 @@ $articles = fetchArticles($conn);
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/styles2.css" rel="stylesheet">
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -56,25 +58,20 @@ $articles = fetchArticles($conn);
     <main class="container content">
         <div class="row">
             <div class="col-md-8">
-                <div class="row justify-content-center">
-                    <h2 class="text-center">Artikel</h2>
+            <div class="row justify-content-center">
+                    <h2 class="text-center">Objek Wisata</h2>
                 </div>
                 <div class="row">
-                    <?php foreach ($articles as $article): ?>
+                    <?php foreach ($wisata as $w): ?>
                         <div class="col-md-4 mb-4 d-flex align-items-stretch">
                             <div class="card">
-                                <img class="card-img-top" src="admin/<?php echo htmlspecialchars($article['foto']); ?>"
-                                    alt="Article Image">
+                                <img class="card-img-top" src="admin/<?php echo htmlspecialchars($w['foto']); ?>" alt="Article Image">
                                 <div class="card-body">
-                                    <h2 class="card-title">
-                                        <?php echo htmlspecialchars(limitCharacters($article['judul'], 25)); ?>
-                                    </h2>
-                                    <p class="card-text"><small
-                                            class="text-muted"><?php echo htmlspecialchars($article['tglUpload']); ?></small>
-                                    </p>
-                                    <p><?php echo htmlspecialchars(limitCharacters($article['deskripsi'], 35)); ?></p>
+                                    <h2 class="card-title"><?php echo htmlspecialchars(limitCharacters($w['nama'], 25)); ?></h2>
+                                    <p class="card-text"><small class="text-muted"><?php echo htmlspecialchars($w['tglUpload']); ?></small></p>
+                                    <p><?php echo htmlspecialchars(limitCharacters($w['deskripsi'], 35)); ?></p>
                                     <div class="read-more">
-                                        <a href="artikelDetail.php?id=<?php echo $article['id']; ?>">Selengkapnya</a>
+                                        <a href="objekWisataDetail.php?id=<?php echo $w['id']; ?>">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +90,7 @@ $articles = fetchArticles($conn);
             </div>
         </div>
     </main>
-
+    
     <?php include 'templates/footer.php'; ?>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -101,7 +98,7 @@ $articles = fetchArticles($conn);
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#table-1').DataTable();
         });
     </script>

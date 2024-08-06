@@ -9,11 +9,26 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.php">Artikel</a></li>
                 <li class="nav-item"><a class="nav-link" href="objekWisata.php">Obyek Wisata</a></li>
-                <li class="nav-item"><a class="nav-link" href="fasilitasWisata.php">Fasilitas Wisata</a></li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Fasilitas Wisata
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="fasilitasWisataGratis.php">Fasilitas Wisata Gratis</a>
+                        <a class="dropdown-item" href="fasilitasWisataBerbayar.php">Fasilitas Wisata Berbayar</a>
+                    </div>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="paketWisata.php">Paket Wisata</a></li>
-                <li class="nav-item"><a class="nav-link" href="Pemesanan.php">Pemesanan</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pemesanan
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="pemesananCari.php">Cari Pemesanan</a>
+                        <a class="dropdown-item" href="pemesanan.php">Pemesanan</a>
+                    </div>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
             </ul>
         </div>
     </div>
